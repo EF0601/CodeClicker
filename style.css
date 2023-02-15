@@ -1,0 +1,40 @@
+*{
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: gray;
+}
+.click{
+    width: 500px;
+    height: 500px;
+    font-size: 150px;
+    border: none;
+}
+button:hover{
+    color: yellow;
+}
+button{
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 2px solid white;
+    background-color: black;
+    color: white;
+}
+body{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+.upgrades{
+    padding: 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.upgrade{
+    text-align: left;
+}
