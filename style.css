@@ -4,6 +4,26 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: black;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: black;
+    cursor: n-resize;
+  }
 html{
     background-color: gray;
 }
@@ -23,7 +43,7 @@ button{
     background-color: black;
     color: white;
 }
-body{
+.container{
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
@@ -35,6 +55,11 @@ body{
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.upgradeBTN,
+.helpBTN{
+    width: 100%;
+}
 .upgrade{
     text-align: left;
+    display: inline;
 }
