@@ -8,16 +8,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="clickZone">
-        <button class="click" onclick="click()">/code <div class="power">1</div> times</button>
-    </div>
-    <div class="upgrades">
-        <h1 style="font-size: 70px;">CodeClicker</h1>
-        <h1 style="font-size: 35px;"class="codepowercoins">CodeCoins</h1>
-        <br>
-        <div class="upgrade">
-            <button class="upgradeBTN" onclick="buy('Autoclicker', 30)"><h1>Mouse Autoclicker Program</h1> <br> <h2>30 CodeCoins</h2> <h2>Owned: <span class="autoclickerowned"></span></h2></button>
+    <div class="container">
+        <div class="clickZone">
+            <button class="click" onclick="codeclick()">/code <div class="power">1</div> times</button> 
+            <br><br><br>
+            <button onclick="help()" class="helpBTN"><h1>Help</h1></button><br><br><br>
+            <button onclick="achieve()" class="helpBTN"><h1>Achievements</h1></button>
+        </div>
+        <div class="upgrades">
+            <h1 style="font-size: 70px;">CodeClicker</h1>
+            <h1 style="font-size: 35px;"class="CodeCoins">0 CodeCoins</h1>
+            <br>
+            <div class="upgrade">
+                <button class="upgradeBTN" onclick="buy('Autoclicker')"><h1>Mouse Autoclicker Program</h1><br> <p>Automatically clicks every second. +1 click per level.</p> <br> <h2><span class="Autoclickerprice">30</span> CodeCoins</h2> <h2>Owned: <span class="autoclickerowned"></span></h2></button>
+
+                <br>
+
+                <button class="upgradeBTN" onclick="buy('Hack')"><h1>Hacked Client</h1> <br><p>Grants Base 300 CodeCoins (multiplys by 2 per level)</p><br>  
+                <h2><span class="Hackclientprice">1000</span> CodeCoins</h2> <h2>Owned: <span class="Hackclientowned"></span></h2></button>
+
+                <br>
+                
+                <button class="upgradeBTN" onclick="buy('Helper')"><h1>Helper</h1> <br><p>Mouse Autoclicker, but better Base: +5 click (multiplys by 1.5 per level)</p><br>  
+                <h2><span class="Hackclientprice">500</span> CodeCoins</h2> <h2>Owned: <span class="Hackclientowned"></span></h2></button>
+
+                <br>
+
+                <button class="upgradeBTN" onclick="buy('MagicHack')" disabled style="color: gray;"><h1>Magic Hacked Client</h1> <br><p>Set the amount off coins you have</p><br>  
+                <h2><span class="Hackclientprice">10000000</span> CodeCoins</h2> <h2>Owned: <span class="Hackclientowned"></span></h2></button>
+            </div>
         </div>
     </div>
+    
 </body>
+<script src="script.js"></script>
+<br>
+
 </html>
