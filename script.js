@@ -9,6 +9,7 @@ let keyboardprice = 55;
 
 //display assignment
 const coindisplay = document.querySelector('.CodeCoins');
+const cpcdisplay = document.querySelector('.power');
 const autoclickerpricedisplay = document.querySelector('.Autoclickerprice');
 const hackpricedisplay = document.querySelector('.Hackclientprice');
 const keyboardpricedisplay = document.querySelector('.Keyboardprice');
@@ -40,7 +41,8 @@ function codeclick(){
 
 //Update displays
 function updateCoins(){
-    coindisplay.textContent = String(codecoin) + " CodeCoins";
+    coindisplay.textContent = String(codecoin) + " Code lines";
+    cpcdisplay.textContent = cpc;
     AutoclickerOwnedDisplay.textContent = AutoClickerOwned;
     HackOwnedDisplay.textContent = HackOwned;
     KeyboardOwnedDisplay.textContent = KeyboardOwned;
