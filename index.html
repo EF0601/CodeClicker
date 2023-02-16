@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeClicker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modals.css">
 </head>
 <body>
     <div class="container">
         <div class="clickZone">
-            <button class="click" onclick="codeclick()">/code <div class="power">1</div> times</button> 
+            <button class="click" onclick="codeclick()">/code <div class="power">1</div> time</button> 
             <br><br><br>
-            <button onclick="help()" class="helpBTN"><h1>Help</h1></button><br><br><br>
-            <button onclick="achieve()" class="helpBTN"><h1>Achievements</h1></button>
+            <button onclick="help()" class="helpBTN" id="myBtn"><h1>Help</h1></button><br><br><br>
+            <button onclick="achieve()" class="helpBTN" id="myBtn2"><h1>Achievements</h1></button><br><br><br>
+            <button onclick="ADMIN()" class="helpBTN" style="color: gray;" disabled><h1>ADMIN MODE</h1></button>
         </div>
         <div class="upgrades">
             <h1 style="font-size: 70px;">CodeClicker</h1>
@@ -26,6 +28,11 @@
 
                 <button class="upgradeBTN" onclick="buy('Hack')"><h1>Hacked Client</h1> <br><p>Grants Base 300 CodeCoins (multiplys by 2 per level)</p><br>  
                 <h2><span class="Hackclientprice">1000</span> CodeCoins</h2> <h2>Owned: <span class="Hackclientowned"></span></h2></button>
+                
+                <br>
+
+                <button class="upgradeBTN" onclick="buy('Keyboard')"><h1>Special Keyboard</h1> <br><p>Grants +1 coin for clicks per click +1 per level</p><br>  
+                <h2><span class="Keyboardprice">55</span> CodeCoins</h2> <h2>Owned: <span class="Keyboardowned"></span></h2></button>
 
                 <br>
                 
@@ -38,10 +45,38 @@
                 <h2><span class="Hackclientprice">10000000</span> CodeCoins</h2> <h2>Owned: <span class="Hackclientowned"></span></h2></button>
             </div>
         </div>
+
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1>Help Menu</h1><br>
+              <p>Press the big /code 1 time button to start! <br> 
+                Buy various upgrades to make your life easier. <br>
+                Try to get as much money as possible.
+                Imagine the possibilities! <br>
+                Flex on your friends by completing all the achievements, coming in version 0.3.n?
+              </p>
+            </div>
+          
+        </div>
+        <div id="myModal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close2">&times;</span>
+              <h1>Achievements Menu</h1><br>
+              <p><i>Coming soon</i></p>
+            </div>
+          
+        </div>
     </div>
     
 </body>
 <script src="script.js"></script>
+<script src="modal.js"></script>
 <br>
 
 </html>
