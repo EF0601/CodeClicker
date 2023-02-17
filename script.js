@@ -6,6 +6,7 @@ let codecoin = 0;
 let autoClickerPrice = 30;
 let hackPrice = 1000;
 let keyboardprice = 55;
+let helperprice = 500;
 
 //display assignment
 const coindisplay = document.querySelector('.CodeCoins');
@@ -13,17 +14,20 @@ const cpcdisplay = document.querySelector('.power');
 const autoclickerpricedisplay = document.querySelector('.Autoclickerprice');
 const hackpricedisplay = document.querySelector('.Hackclientprice');
 const keyboardpricedisplay = document.querySelector('.Keyboardprice');
+const helperpricedisplay = document.querySelector('.HelperPrice');
 //price display assignment
 
 //owned items assignment
 let AutoClickerOwned = 0;
 let HackOwned = 0;
 let KeyboardOwned = 0;
+let HelperOwned = 0;
 
 //owned display assignment
 const AutoclickerOwnedDisplay = document.querySelector('.autoclickerowned');
 const HackOwnedDisplay = document.querySelector('.Hackclientowned');
 const KeyboardOwnedDisplay = document.querySelector('.Keyboardowned')
+const HelperOwnedDisplay = document.querySelector('.HelperOwned')
 
 //CPS stuff
 setInterval(executeCPS, 1000);
@@ -46,6 +50,11 @@ function updateCoins(){
     AutoclickerOwnedDisplay.textContent = AutoClickerOwned;
     HackOwnedDisplay.textContent = HackOwned;
     KeyboardOwnedDisplay.textContent = KeyboardOwned;
+    HelperOwnedDisplay.textContent = HelperOwned;
+
+    if(codecoin >= 100000000000000000000000000000000000000000000){
+        
+    }
 }
 
 //Buying stuff
@@ -75,6 +84,15 @@ function buy(item){
             cpc = cpc + 1;
             keyboardpricedisplay.textContent = newprice(0.025,keyboardprice,KeyboardOwned);
             keyboardprice = newprice(0.025,keyboardprice,KeyboardOwned);
+        }
+    }
+    if (item === "Helper") {
+        if(codecoin >= helperprice){
+            codecoin = codecoin - helperprice;
+            HelperOwned++
+            cps = cps + (5 * HelperOwned)
+            helperpricedisplay.textContent = newprice(0.025,helperprice,HelperOwned);
+            helperprice = newprice(0.025,helperprice,HelperOwned);
         }
     }
     updateCoins();
